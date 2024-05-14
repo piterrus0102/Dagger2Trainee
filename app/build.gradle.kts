@@ -32,6 +32,19 @@ android {
             )
         }
     }
+
+    flavorDimensions("qqqqq")
+    productFlavors {
+        create("first") {
+            flavorDimensions("qqqqq")
+            buildConfigField("String", "type", "\"first\"")
+        }
+
+        create("second") {
+            flavorDimensions("qqqqq")
+            buildConfigField("String", "type", "\"second\"")
+        }
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
