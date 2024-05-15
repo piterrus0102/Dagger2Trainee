@@ -2,7 +2,6 @@ package com.piterrus.dagger2
 
 import androidx.multidex.MultiDexApplication
 import com.piterrus.dagger2.di.AppComponent
-import com.piterrus.dagger2.di.AppModule
 import com.piterrus.dagger2.di.DaggerAppComponent
 
 class App : MultiDexApplication() {
@@ -16,8 +15,9 @@ class App : MultiDexApplication() {
         super.onCreate()
         appComponent = DaggerAppComponent
             .builder()
-            .appModule(AppModule(this))
+            .application(this)
             .build()
+
     }
 
 }

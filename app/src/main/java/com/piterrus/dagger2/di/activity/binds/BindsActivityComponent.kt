@@ -1,4 +1,4 @@
-package com.piterrus.dagger2.di.activity
+package com.piterrus.dagger2.di.activity.binds
 
 import com.piterrus.dagger2.di.AppComponent
 import com.piterrus.dagger2.di.FeatureScope
@@ -10,11 +10,12 @@ import dagger.Component
 @FeatureScope
 @Component(
     modules = [
-        ActivityModule::class
+        BindsActivityModule::class,
+        BindsViewModelModule::class
     ],
     dependencies = [AppComponent::class]
 )
-interface ActivityComponent {
+interface BindsActivityComponent {
     @Second
     fun getSecondActivityViewModel(): ActivityViewModel
     @First

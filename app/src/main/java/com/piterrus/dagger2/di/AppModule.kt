@@ -9,13 +9,7 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 
 @Module
-class AppModule(private val application: App) {
-
-    @Provides
-    @AppScope
-    fun provideApplicationContext(): Context {
-        return application
-    }
+class AppModule {
 
     @Provides
     @AppScope
@@ -24,7 +18,7 @@ class AppModule(private val application: App) {
     }
 
     @[Provides AppScope]
-    fun provideSharedPreferences(context: Context): SharedPreferences {
-        return context.getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
+    fun provideSharedPreferences(app: App): SharedPreferences {
+        return app.getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
     }
 }

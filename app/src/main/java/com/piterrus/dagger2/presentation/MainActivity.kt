@@ -12,9 +12,8 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.multidex.BuildConfig
 import com.piterrus.dagger2.App
-import com.piterrus.dagger2.di.activity.DaggerActivityComponent
+import com.piterrus.dagger2.di.activity.binds.DaggerBindsActivityComponent
 import com.piterrus.dagger2.ui.theme.Dagger2TraineeTheme
 
 class MainActivity : ComponentActivity() {
@@ -23,15 +22,20 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             val activityComponent = remember {
-                DaggerActivityComponent.builder()
+                DaggerBindsActivityComponent.builder()
                     .appComponent(App.appComponent)
                     .build()
             }
+//            val activityComponent = remember {
+//                DaggerProvidesActivityComponent.builder()
+//                    .appComponent(App.appComponent)
+//                    .build()
+//            }
             val viewModel: ActivityViewModel
-            if (com.piterrus.dagger2.BuildConfig.type == "first") {
-                viewModel = remember { activityComponent.getFirstActivityViewModel() }
+            viewModel = if (com.piterrus.dagger2.BuildConfig.type == "first") {
+                remember { activityComponent.getFirstActivityViewModel() }
             } else {
-                viewModel = remember { activityComponent.getSecondActivityViewModel() }
+                remember { activityComponent.getSecondActivityViewModel() }
             }
 
             val string = viewModel.activityState.collectAsState()
