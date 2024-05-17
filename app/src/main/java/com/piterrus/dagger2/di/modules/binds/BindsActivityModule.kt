@@ -1,4 +1,4 @@
-package com.piterrus.dagger2.di.activity.binds
+package com.piterrus.dagger2.di.modules.binds
 
 import com.piterrus.dagger2.di.FeatureScope
 import com.piterrus.dagger2.di.First

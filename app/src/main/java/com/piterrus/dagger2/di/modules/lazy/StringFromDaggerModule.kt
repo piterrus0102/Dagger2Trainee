@@ -1,15 +1,15 @@
-package com.piterrus.dagger2.presentation.first_screen.di
+package com.piterrus.dagger2.di.modules.lazy
 
 import android.util.Log
 import dagger.Module
 import dagger.Provides
+import dagger.internal.SetBuilder
 
 @Module
 class StringFromDaggerModule {
 
     @Provides
     fun stringFromDagger(): String {
-        Log.e("GETTER", "DAGGER")
         return "stringFromDagger"
     }
 }

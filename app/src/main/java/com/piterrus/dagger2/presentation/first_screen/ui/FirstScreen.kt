@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -16,8 +17,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.piterrus.dagger2.App.Companion.appComponent
 import com.piterrus.dagger2.R
+import com.piterrus.dagger2.domain.into_set_and_into_map.Logger
+import com.piterrus.dagger2.domain.into_set_and_into_map.Printer
 import com.piterrus.dagger2.presentation.first_screen.di.DaggerFirstScreenComponent
 import com.piterrus.dagger2.ui.theme.Dagger2TraineeTheme
+import kotlinx.coroutines.delay
 
 @Composable
 fun FirstScreen(
@@ -27,6 +31,15 @@ fun FirstScreen(
         DaggerFirstScreenComponent.builder()
             .appComponent(appComponent)
             .build()
+    }
+
+    val printersAndLoggersSet = remember { component.getPrintersAndLoggersSet() }
+    val printersAndLoggersMap = remember { component.getPrintersAndLoggersMap() }
+    LaunchedEffect(key1 = true) {
+        printersAndLoggersSet.forEach { it.print("Dagger2 @IntoSet working") }
+        delay(2000)
+        printersAndLoggersMap[Printer.KEY]?.print("Dagger2 @IntoMap working printer")
+        printersAndLoggersMap[Logger.KEY]?.print("Dagger2 @IntoMap working logger")
     }
 
     var click by remember { mutableStateOf(false) }
