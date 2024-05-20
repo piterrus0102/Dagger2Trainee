@@ -40,6 +40,7 @@ fun FirstScreen(
         delay(2000)
         printersAndLoggersMap[Printer.KEY]?.print("Dagger2 @IntoMap working printer")
         printersAndLoggersMap[Logger.KEY]?.print("Dagger2 @IntoMap working logger")
+        component.getClassWithInjectedMethod().checkWorkingPostInit()
     }
 
     var click by remember { mutableStateOf(false) }
