@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Dagger2Trainee</string>
     <string name="button_text">Push me!</string>
+    <string name="provides">Demonstrate "Provides"</string>
+    <string name="binds">Demonstrate "Binds"</string>
+
 </resources>

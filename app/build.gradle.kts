@@ -88,6 +88,7 @@ dependencies {
     implementation(libs.compose.graphics)
     implementation(libs.compose.preview)
     implementation(libs.androidx.camera.lifecycle)
+    implementation(libs.compose.navigation)
     testImplementation(libs.androidx.junit.ktx)
     testImplementation(libs.androidx.runner)
     debugImplementation(libs.compose.tooling)

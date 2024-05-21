@@ -1,4 +1,4 @@
-package com.piterrus.dagger2.presentation
+package com.piterrus.dagger2.presentation.activity
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
-class ActivityViewModel(
+class MainActivityViewModel(
     private val activityUseCase: UseCase,
     private val coroutineDispatcher: CoroutineDispatcher
 ) : ViewModel() {

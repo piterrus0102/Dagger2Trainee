@@ -6,7 +6,7 @@ import com.piterrus.dagger2.di.Second
 import com.piterrus.dagger2.domain.UseCase
 import com.piterrus.dagger2.domain.provides.ReturnStringUseCase2Provides
 import com.piterrus.dagger2.domain.provides.ReturnStringUseCaseProvides
-import com.piterrus.dagger2.presentation.ActivityViewModel
+import com.piterrus.dagger2.presentation.activity.MainActivityViewModel
 import dagger.Module
 import dagger.Provides
 import kotlinx.coroutines.CoroutineDispatcher
@@ -34,8 +34,8 @@ class ProvidesActivityModule {
     fun viewModelFirst(
         @First activityUseCase: UseCase,
         coroutineDispatcher: CoroutineDispatcher
-    ): ActivityViewModel {
-        return ActivityViewModel(activityUseCase, coroutineDispatcher)
+    ): MainActivityViewModel {
+        return MainActivityViewModel(activityUseCase, coroutineDispatcher)
     }
 
     @Provides
@@ -44,8 +44,8 @@ class ProvidesActivityModule {
     fun viewModelSecond(
         @Second activityUseCase: UseCase,
         coroutineDispatcher: CoroutineDispatcher
-    ): ActivityViewModel {
-        return ActivityViewModel(activityUseCase, coroutineDispatcher)
+    ): MainActivityViewModel {
+        return MainActivityViewModel(activityUseCase, coroutineDispatcher)
     }
 
 }

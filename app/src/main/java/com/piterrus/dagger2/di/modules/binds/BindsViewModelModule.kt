@@ -4,7 +4,7 @@ import com.piterrus.dagger2.di.FeatureScope
 import com.piterrus.dagger2.di.First
 import com.piterrus.dagger2.di.Second
 import com.piterrus.dagger2.domain.UseCase
-import com.piterrus.dagger2.presentation.ActivityViewModel
+import com.piterrus.dagger2.presentation.activity.MainActivityViewModel
 import dagger.Module
 import dagger.Provides
 import kotlinx.coroutines.CoroutineDispatcher
@@ -18,8 +18,8 @@ class BindsViewModelModule {
     fun viewModelFirst(
         @First activityUseCase: UseCase,
         coroutineDispatcher: CoroutineDispatcher
-    ): ActivityViewModel {
-        return ActivityViewModel(activityUseCase, coroutineDispatcher)
+    ): MainActivityViewModel {
+        return MainActivityViewModel(activityUseCase, coroutineDispatcher)
     }
 
     @Provides
@@ -28,7 +28,7 @@ class BindsViewModelModule {
     fun viewModelSecond(
         @Second activityUseCase: UseCase,
         coroutineDispatcher: CoroutineDispatcher
-    ): ActivityViewModel {
-        return ActivityViewModel(activityUseCase, coroutineDispatcher)
+    ): MainActivityViewModel {
+        return MainActivityViewModel(activityUseCase, coroutineDispatcher)
     }
 }
