@@ -2,11 +2,11 @@ package com.piterrus.dagger2.presentation.activity
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.FilledTonalButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -26,19 +26,24 @@ fun MainActivityView(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(horizontal = 12.dp)
+            .padding(
+                horizontal = 12.dp,
+                vertical = 24.dp
+            )
         ,
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
     ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth(),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.SpaceAround
+        Text(
+            text = stringResource(id = R.string.dagger_examples),
+            style = MaterialTheme.typography.headlineSmall
+        )
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            horizontalAlignment = Alignment.Start,
+            verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
             FilledTonalButton(
-                modifier = Modifier.fillMaxWidth(.4F),
+                modifier = Modifier.fillMaxWidth(0.8F),
                 onClick = {
                     onIntent.invoke(MainActivityIntent.OnProvidesClick)
                 },
@@ -51,13 +56,39 @@ fun MainActivityView(
             )
 
             FilledTonalButton(
-                modifier = Modifier.fillMaxWidth(.6F),
+                modifier = Modifier.fillMaxWidth(0.8F),
                 onClick = {
                     onIntent.invoke(MainActivityIntent.OnBindsClick)
                 },
                 content = {
                     Text(
                         text = stringResource(id = R.string.binds),
+                        textAlign = TextAlign.Center
+                    )
+                }
+            )
+
+            FilledTonalButton(
+                modifier = Modifier.fillMaxWidth(0.8F),
+                onClick = {
+                    onIntent.invoke(MainActivityIntent.OnIntoSetAndIntoMapClick)
+                },
+                content = {
+                    Text(
+                        text = stringResource(id = R.string.into_set_and_into_map),
+                        textAlign = TextAlign.Center
+                    )
+                }
+            )
+
+            FilledTonalButton(
+                modifier = Modifier.fillMaxWidth(0.8F),
+                onClick = {
+                    onIntent.invoke(MainActivityIntent.OnInjectMethodClick)
+                },
+                content = {
+                    Text(
+                        text = stringResource(id = R.string.class_with_inject_methods),
                         textAlign = TextAlign.Center
                     )
                 }

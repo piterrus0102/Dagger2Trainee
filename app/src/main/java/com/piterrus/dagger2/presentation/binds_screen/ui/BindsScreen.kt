@@ -40,15 +40,6 @@ fun BindsScreen() {
     }
     val string = viewModel.activityState.collectAsState().value
 
-//    val printersAndLoggersSet = remember { component.getPrintersAndLoggersSet() }
-//    val printersAndLoggersMap = remember { component.getPrintersAndLoggersMap() }
-//    LaunchedEffect(key1 = true) {
-//        printersAndLoggersSet.forEach { it.print("Dagger2 @IntoSet working") }
-//        delay(2000)
-//        printersAndLoggersMap[Printer.KEY]?.print("Dagger2 @IntoMap working printer")
-//        printersAndLoggersMap[Logger.KEY]?.print("Dagger2 @IntoMap working logger")
-//    }
-
     var click by remember { mutableStateOf(false) }
     val computableText = if (click) {
         component.lazyStringFromDagger().get()

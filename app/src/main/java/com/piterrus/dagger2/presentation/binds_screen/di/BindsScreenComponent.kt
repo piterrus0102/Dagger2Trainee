@@ -32,19 +32,3 @@ interface BindsScreenComponent {
     fun getFirstActivityViewModel(): MainActivityViewModel
     fun lazyStringFromDagger(): Lazy<String>
 }
-
-//@FeatureScope
-//@Component(
-//    modules = [
-//        StringFromDaggerModule::class,
-//        IntoSetModule::class,
-//        IntoMapModule::class
-//    ],
-//    dependencies = [AppComponent::class]
-//)
-//interface BindsScreenComponent {
-//    fun lazyStringFromDagger(): Lazy<String>
-//    fun getPrintersAndLoggersSet(): Set<PrintersAndLoggers>
-//    fun getPrintersAndLoggersMap(): Map<String, PrintersAndLoggers>
-//    fun getClassWithInjectedMethod(): ClassWithInjectedMethod
-//}
