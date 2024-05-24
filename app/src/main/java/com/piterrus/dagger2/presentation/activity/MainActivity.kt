@@ -15,8 +15,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
 import com.piterrus.dagger2.navigation.NavHostScreen
-import com.piterrus.dagger2.ui.components.TopNavBar
-import com.piterrus.dagger2.ui.theme.Dagger2TraineeTheme
+import com.piterrus.dagger2.compose.components.TopNavBar
+import com.piterrus.dagger2.compose.theme.Dagger2TraineeTheme
 
 class MainActivity : ComponentActivity() {
 

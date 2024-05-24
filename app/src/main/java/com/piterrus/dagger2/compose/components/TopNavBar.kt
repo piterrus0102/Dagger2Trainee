@@ -1,4 +1,4 @@
-package com.piterrus.dagger2.ui.components
+package com.piterrus.dagger2.compose.components
 
 import android.content.res.Configuration
 import androidx.compose.foundation.Image
@@ -22,7 +22,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.piterrus.dagger2.R
-import com.piterrus.dagger2.ui.theme.Dagger2TraineeTheme
+import com.piterrus.dagger2.compose.theme.Dagger2TraineeTheme
 
 @Composable
 fun TopNavBar(

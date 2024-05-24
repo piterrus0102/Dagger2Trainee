@@ -17,8 +17,9 @@ This is single module app yet. During of increasing dagger2 features it can be g
 There are several packages in app gradle module:
 - **di**. Contains dagger common dependencies and modules
 - **domain**. Contains domain entities for software environment (test)
+- **navigation**. Contains NavHost and enum class with all screens
 - **presentation**. Contains @Composable functions and screens
-- **ui.theme**. Contains themes, colors, typography
+- **compose**. Contains themes, colors, typography
 
 ## Dagger2 structure (app-bb)
 

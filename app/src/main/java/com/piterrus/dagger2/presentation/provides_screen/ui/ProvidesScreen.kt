@@ -20,7 +20,7 @@ import com.piterrus.dagger2.App
 import com.piterrus.dagger2.R
 import com.piterrus.dagger2.presentation.activity.MainActivityViewModel
 import com.piterrus.dagger2.presentation.provides_screen.di.DaggerProvidesScreenComponent
-import com.piterrus.dagger2.ui.theme.Dagger2TraineeTheme
+import com.piterrus.dagger2.compose.theme.Dagger2TraineeTheme
 
 @Composable
 fun ProvidesScreen() {

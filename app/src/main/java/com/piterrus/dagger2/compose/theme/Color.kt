@@ -1,4 +1,4 @@
-package com.piterrus.dagger2.ui.theme
+package com.piterrus.dagger2.compose.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -16,7 +16,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.piterrus.dagger2.R
-import com.piterrus.dagger2.ui.theme.Dagger2TraineeTheme
+import com.piterrus.dagger2.compose.theme.Dagger2TraineeTheme
 
 
 @Composable
