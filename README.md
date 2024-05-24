@@ -29,5 +29,6 @@ There are described @Binds and @Provides inject methods:
   - **binds**. Contains component and two modules for demonstrating dependency injection by binds-mechanism.
   - **provides**. Contains component and module for demonstrating dependency injection by provides-mechanism.
 
+
 DaggerQualifiers.kt includes two qualifier for demonstrating injects' separation by qualifiers
 
