@@ -9,4 +9,8 @@ sealed class MainActivityIntent {
     data object OnIntoSetAndIntoMapClick : MainActivityIntent()
 
     data object OnInjectMethodClick : MainActivityIntent()
+
+    data object OnBuilderClick : MainActivityIntent()
+
+    data object OnBindsInstanceClick : MainActivityIntent()
 }

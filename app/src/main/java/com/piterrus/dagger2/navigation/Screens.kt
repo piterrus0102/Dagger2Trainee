@@ -5,5 +5,7 @@ enum class Screens(val route: String) {
     ProvidesScreen("ProvidesScreen"),
     BindsScreen("BindsScreen"),
     IntoSetAndIntoMaScreen("IntoSetAndIntoMaScreen"),
-    InjectMethodScreen("InjectMethodScreen")
+    InjectMethodScreen("InjectMethodScreen"),
+    BuilderScreen("BuilderScreen"),
+    BindsInstanceScreen("BindsInstanceScreen")
 }

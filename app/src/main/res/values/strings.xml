@@ -7,5 +7,8 @@
     <string name="binds">Demonstrate @Binds</string>
     <string name="into_set_and_into_map">Demonstrate @IntoSet and @IntoMap</string>
     <string name="class_with_inject_methods">Demonstrate class with @Inject methods</string>
+    <string name="component_builder">Demonstrate @Component.Builder</string>
+    <string name="binds_instance">Demonstrate @BindsInstance</string>
+
 
 </resources>

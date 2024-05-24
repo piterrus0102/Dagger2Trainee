@@ -93,6 +93,32 @@ fun MainActivityView(
                     )
                 }
             )
+
+            FilledTonalButton(
+                modifier = Modifier.fillMaxWidth(0.8F),
+                onClick = {
+                    onIntent.invoke(MainActivityIntent.OnBuilderClick)
+                },
+                content = {
+                    Text(
+                        text = stringResource(id = R.string.component_builder),
+                        textAlign = TextAlign.Center
+                    )
+                }
+            )
+
+            FilledTonalButton(
+                modifier = Modifier.fillMaxWidth(0.8F),
+                onClick = {
+                    onIntent.invoke(MainActivityIntent.OnBindsInstanceClick)
+                },
+                content = {
+                    Text(
+                        text = stringResource(id = R.string.binds_instance),
+                        textAlign = TextAlign.Center
+                    )
+                }
+            )
         }
     }
 }

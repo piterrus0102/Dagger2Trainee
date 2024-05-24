@@ -1,5 +1,6 @@
 package com.piterrus.dagger2.di
 
+import android.content.Context
 import android.content.SharedPreferences
 import com.piterrus.dagger2.App
 import dagger.BindsInstance
@@ -15,12 +16,7 @@ import kotlinx.coroutines.CoroutineDispatcher
 )
 interface AppComponent {
 
-    @Component.Builder
-    interface Builder {
-        fun build(): AppComponent
-        @BindsInstance
-        fun application(application: App): Builder
-    }
+    fun context(): Context
     fun coroutineDispatcher(): CoroutineDispatcher
     fun appSharedPreferences(): SharedPreferences
 }
