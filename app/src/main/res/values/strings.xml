@@ -7,8 +7,12 @@
     <string name="binds">Demonstrate @Binds</string>
     <string name="into_set_and_into_map">Demonstrate @IntoSet and @IntoMap</string>
     <string name="class_with_inject_methods">Demonstrate class with @Inject methods</string>
-    <string name="component_builder">Demonstrate @Component.Builder</string>
+    <string name="component_builder_and_component_factory">Demonstrate @Component.Builder and @Component.Factory</string>
     <string name="binds_instance">Demonstrate @BindsInstance</string>
-
+    <string name="text_from_builder">Text from Builder</string>
+    <string name="text_from_factory_first">Text from Factory on first @Composable widget</string>
+    <string name="text_from_factory_second">Text from Factory on second @Composable widget</string>
+    <string name="subcomponent_string">String which obtaining using coroutine dispatcher and appContext</string>
+    <string name="subcomponent">Demonstrate @Subcomponent</string>
 
 </resources>

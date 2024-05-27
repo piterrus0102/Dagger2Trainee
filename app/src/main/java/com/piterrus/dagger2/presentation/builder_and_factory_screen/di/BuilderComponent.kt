@@ -1,15 +1,15 @@
-package com.piterrus.dagger2.presentation.builder_screen.di
+package com.piterrus.dagger2.presentation.builder_and_factory_screen.di
 
 import com.piterrus.dagger2.di.AppComponent
 import com.piterrus.dagger2.di.FeatureScope
-import com.piterrus.dagger2.di.modules.builder.BuilderModule
+import com.piterrus.dagger2.di.modules.builder_and_factory.BuilderAndFactoryModule
 import dagger.Component
 
 
 @FeatureScope
 @Component(
     modules = [
-        BuilderModule::class
+        BuilderAndFactoryModule::class
     ],
     dependencies = [AppComponent::class]
 )
@@ -18,7 +18,7 @@ interface BuilderComponent {
     @Component.Builder
     interface BuilderDaggerBuilder {
         fun appComponent(appComponent: AppComponent): BuilderDaggerBuilder
-        fun builderModule(builderModule: BuilderModule): BuilderDaggerBuilder
+        fun builderModule(builderAndFactoryModule: BuilderAndFactoryModule): BuilderDaggerBuilder
         fun buildBuilderComponent() : BuilderComponent
     }
 

@@ -19,6 +19,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.piterrus.dagger2.R
@@ -45,8 +46,8 @@ fun TopNavBar(
                 Text(
                     modifier = Modifier.padding(vertical = 15.dp),
                     text = title,
-                    style = MaterialTheme.typography.titleMedium
-
+                    style = MaterialTheme.typography.titleMedium,
+                    textAlign = TextAlign.Center
                 )
             }
 

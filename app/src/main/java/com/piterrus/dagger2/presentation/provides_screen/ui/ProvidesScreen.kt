@@ -18,7 +18,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.piterrus.dagger2.App
 import com.piterrus.dagger2.R
-import com.piterrus.dagger2.presentation.activity.MainActivityViewModel
+import com.piterrus.dagger2.presentation.activity.ui.MainActivityViewModel
 import com.piterrus.dagger2.presentation.provides_screen.di.DaggerProvidesScreenComponent
 import com.piterrus.dagger2.compose.theme.Dagger2TraineeTheme
 

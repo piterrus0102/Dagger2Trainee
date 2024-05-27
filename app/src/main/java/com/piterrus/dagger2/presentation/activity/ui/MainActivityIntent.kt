@@ -1,4 +1,4 @@
-package com.piterrus.dagger2.presentation.activity
+package com.piterrus.dagger2.presentation.activity.ui
 
 sealed class MainActivityIntent {
 
@@ -10,7 +10,9 @@ sealed class MainActivityIntent {
 
     data object OnInjectMethodClick : MainActivityIntent()
 
-    data object OnBuilderClick : MainActivityIntent()
+    data object OnBuilderAndFactoryClick : MainActivityIntent()
 
     data object OnBindsInstanceClick : MainActivityIntent()
+
+    data object OnSubcomponentClick : MainActivityIntent()
 }

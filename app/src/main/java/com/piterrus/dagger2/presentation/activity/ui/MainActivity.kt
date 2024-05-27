@@ -1,4 +1,4 @@
-package com.piterrus.dagger2.presentation.activity
+package com.piterrus.dagger2.presentation.activity.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

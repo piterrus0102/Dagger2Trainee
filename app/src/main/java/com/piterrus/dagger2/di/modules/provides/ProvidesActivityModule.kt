@@ -6,7 +6,7 @@ import com.piterrus.dagger2.di.Second
 import com.piterrus.dagger2.domain.UseCase
 import com.piterrus.dagger2.domain.provides.ReturnStringUseCase2Provides
 import com.piterrus.dagger2.domain.provides.ReturnStringUseCaseProvides
-import com.piterrus.dagger2.presentation.activity.MainActivityViewModel
+import com.piterrus.dagger2.presentation.activity.ui.MainActivityViewModel
 import dagger.Module
 import dagger.Provides
 import kotlinx.coroutines.CoroutineDispatcher

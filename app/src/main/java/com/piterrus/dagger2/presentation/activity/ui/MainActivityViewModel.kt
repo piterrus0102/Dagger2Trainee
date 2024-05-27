@@ -1,4 +1,4 @@
-package com.piterrus.dagger2.presentation.activity
+package com.piterrus.dagger2.presentation.activity.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

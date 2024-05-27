@@ -14,10 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.piterrus.dagger2.App
-import com.piterrus.dagger2.di.modules.builder.BuilderModule
 import com.piterrus.dagger2.presentation.binds_instance.di.DaggerBindsInstanceComponent
-import com.piterrus.dagger2.presentation.builder_screen.di.DaggerBuilderComponent
-import dagger.BindsInstance
 
 
 @Composable

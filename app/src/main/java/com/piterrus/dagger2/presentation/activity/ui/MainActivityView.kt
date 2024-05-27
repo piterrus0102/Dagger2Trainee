@@ -1,4 +1,4 @@
-package com.piterrus.dagger2.presentation.activity
+package com.piterrus.dagger2.presentation.activity.ui
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -97,11 +97,11 @@ fun MainActivityView(
             FilledTonalButton(
                 modifier = Modifier.fillMaxWidth(0.8F),
                 onClick = {
-                    onIntent.invoke(MainActivityIntent.OnBuilderClick)
+                    onIntent.invoke(MainActivityIntent.OnBuilderAndFactoryClick)
                 },
                 content = {
                     Text(
-                        text = stringResource(id = R.string.component_builder),
+                        text = stringResource(id = R.string.component_builder_and_component_factory),
                         textAlign = TextAlign.Center
                     )
                 }
@@ -115,6 +115,19 @@ fun MainActivityView(
                 content = {
                     Text(
                         text = stringResource(id = R.string.binds_instance),
+                        textAlign = TextAlign.Center
+                    )
+                }
+            )
+
+            FilledTonalButton(
+                modifier = Modifier.fillMaxWidth(0.8F),
+                onClick = {
+                    onIntent.invoke(MainActivityIntent.OnSubcomponentClick)
+                },
+                content = {
+                    Text(
+                        text = stringResource(id = R.string.subcomponent),
                         textAlign = TextAlign.Center
                     )
                 }

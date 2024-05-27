@@ -4,7 +4,7 @@ import com.piterrus.dagger2.di.FeatureScope
 import com.piterrus.dagger2.di.First
 import com.piterrus.dagger2.di.Second
 import com.piterrus.dagger2.domain.UseCase
-import com.piterrus.dagger2.presentation.activity.MainActivityViewModel
+import com.piterrus.dagger2.presentation.activity.ui.MainActivityViewModel
 import dagger.Module
 import dagger.Provides
 import kotlinx.coroutines.CoroutineDispatcher

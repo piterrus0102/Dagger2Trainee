@@ -1,10 +1,10 @@
-package com.piterrus.dagger2.di.modules.builder
+package com.piterrus.dagger2.di.modules.builder_and_factory
 
 import dagger.Module
 import dagger.Provides
 
 @Module
-class BuilderModule(private val stringWhichSetValueDuringBuilding: String) {
+class BuilderAndFactoryModule(private val stringWhichSetValueDuringBuilding: String) {
 
     @Provides
     fun getStringWhichSetValueDuringBuilding(): String {

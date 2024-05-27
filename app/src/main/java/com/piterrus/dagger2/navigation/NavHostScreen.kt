@@ -2,20 +2,19 @@ package com.piterrus.dagger2.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.stringResource
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.piterrus.dagger2.R
-import com.piterrus.dagger2.presentation.activity.MainActivityIntent
-import com.piterrus.dagger2.presentation.activity.MainActivityView
+import com.piterrus.dagger2.presentation.activity.ui.MainActivityIntent
+import com.piterrus.dagger2.presentation.activity.ui.MainActivityView
 import com.piterrus.dagger2.presentation.binds_instance.ui.BindsInstanceScreen
 import com.piterrus.dagger2.presentation.binds_screen.ui.BindsScreen
-import com.piterrus.dagger2.presentation.builder_screen.ui.BuilderScreen
+import com.piterrus.dagger2.presentation.builder_and_factory_screen.ui.BuilderAndFactoryScreen
 import com.piterrus.dagger2.presentation.inject_method_screen.ui.InjectMethodScreen
 import com.piterrus.dagger2.presentation.into_set_and_into_map_screen.ui.IntoSetAndIntoMapScreen
 import com.piterrus.dagger2.presentation.provides_screen.ui.ProvidesScreen
+import com.piterrus.dagger2.presentation.subcomponent_screen.ui.SubcomponentScreen
 
 @Composable
 fun NavHostScreen(
@@ -53,14 +52,19 @@ fun NavHostScreen(
                             navController.navigate(Screens.InjectMethodScreen.route)
                         }
 
-                        MainActivityIntent.OnBuilderClick -> {
-                            onChangeTitle.invoke(context.getString(R.string.component_builder))
-                            navController.navigate(Screens.BuilderScreen.route)
+                        MainActivityIntent.OnBuilderAndFactoryClick -> {
+                            onChangeTitle.invoke(context.getString(R.string.component_builder_and_component_factory))
+                            navController.navigate(Screens.BuilderAndFactoryScreen.route)
                         }
 
                         MainActivityIntent.OnBindsInstanceClick -> {
                             onChangeTitle.invoke(context.getString(R.string.binds_instance))
                             navController.navigate(Screens.BindsInstanceScreen.route)
+                        }
+
+                        MainActivityIntent.OnSubcomponentClick -> {
+                            onChangeTitle.invoke(context.getString(R.string.subcomponent))
+                            navController.navigate(Screens.SubcomponentScreen.route)
                         }
                     }
                 }
@@ -92,15 +96,21 @@ fun NavHostScreen(
         }
 
         composable(
-            route = Screens.BuilderScreen.route
+            route = Screens.BuilderAndFactoryScreen.route
         ) {
-            BuilderScreen()
+            BuilderAndFactoryScreen()
         }
 
         composable(
             route = Screens.BindsInstanceScreen.route
         ) {
             BindsInstanceScreen()
+        }
+
+        composable(
+            route = Screens.SubcomponentScreen.route
+        ) {
+            SubcomponentScreen()
         }
     }
 }

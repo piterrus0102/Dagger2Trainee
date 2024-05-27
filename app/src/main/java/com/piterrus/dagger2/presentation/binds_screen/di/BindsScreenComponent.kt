@@ -6,12 +6,8 @@ import com.piterrus.dagger2.di.First
 import com.piterrus.dagger2.di.Second
 import com.piterrus.dagger2.di.modules.binds.BindsActivityModule
 import com.piterrus.dagger2.di.modules.binds.BindsViewModelModule
-import com.piterrus.dagger2.di.modules.into_set_and_into_map.IntoMapModule
-import com.piterrus.dagger2.di.modules.into_set_and_into_map.IntoSetModule
 import com.piterrus.dagger2.di.modules.lazy.StringFromDaggerModule
-import com.piterrus.dagger2.domain.inject_method.ClassWithInjectedMethod
-import com.piterrus.dagger2.domain.into_set_and_into_map.PrintersAndLoggers
-import com.piterrus.dagger2.presentation.activity.MainActivityViewModel
+import com.piterrus.dagger2.presentation.activity.ui.MainActivityViewModel
 import dagger.Component
 import dagger.Lazy
 
